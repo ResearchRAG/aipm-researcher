@@ -35,3 +35,5 @@ docs/build
 .langgraph-data/
 .next/
 package-lock.json
+docs/.yarnrc.yml
+/docs/.yarn

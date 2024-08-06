@@ -1,12 +1,12 @@
 # Configure LLM
 As described in the [introduction](/docs/gpt-researcher/config), the default LLM is OpenAI due to its superior performance and speed. 
-With that said, GPT Researcher supports various open/closed source LLMs, and you can easily switch between them by adding the `LLM_PROVIDER` env variable and corresponding configuration params.
+With that said, AIPM Researcher supports various open/closed source LLMs, and you can easily switch between them by adding the `LLM_PROVIDER` env variable and corresponding configuration params.
 Current supported LLMs are `openai`, `google` (gemini), `azureopenai`, `ollama`, `anthropic`, `mistral`, `huggingface` and `groq`.
 
 Using any model will require at least updating the `LLM_PROVIDER` param and passing the LLM provider API Key. You might also need to update the `SMART_LLM_MODEL` and `FAST_LLM_MODEL` env vars.
 To learn more about support customization options see [here](/gpt-researcher/config).
 
-**Please note**: GPT Researcher is optimized and heavily tested on GPT models. Some other models might run intro context limit errors, and unexpected responses.
+**Please note**: AIPM Researcher is optimized and heavily tested on GPT models. Some other models might run intro context limit errors, and unexpected responses.
 Please provide any feedback in our [Discord community](https://discord.gg/DUmbTebB) channel, so we can better improve the experience and performance.
 
 Below you can find examples for how to configure the various supported LLMs.
@@ -54,7 +54,7 @@ AZURE_OPENAI_API_KEY="Your key"
 
 ## Ollama
 
-GPT Researcher supports both Ollama LLMs and embeddings. You can choose each or both.
+AIPM Researcher supports both Ollama LLMs and embeddings. You can choose each or both.
 To use [Ollama](http://www.ollama.com) you can set the following environment variables
 
 ```bash

@@ -1,27 +1,28 @@
-# Frequently Asked Questions
+# 常见问题解答
 
-### How do I get started?
-It really depends on what you're aiming for. 
+### 如何开始？
+这实际上取决于您的目标。
 
-If you're looking to connect your AI application to the internet with Tavily tailored API, check out the [Tavily API](https://docs.tavily.com/docs/tavily-api/introductionn) documentation. 
-If you're looking to build and deploy our open source autonomous research agent GPT Researcher, please see [GPT Researcher](/docs/gpt-researcher/introduction) documentation.
-You can also check out demos and examples for inspiration [here](/docs/examples/examples).
-### What is GPT Researcher?
-GPT Researcher is a popular open source autonomous research agent that takes care of the tedious task of research for you, by scraping, filtering and aggregating over 20+ web sources per a single research task.
+如果您希望将您的AI应用程序通过Tavily定制的API连接到互联网，请查看[Tavily API](https://docs.tavily.com/docs/tavily-api/introduction) 官方文档。
+如果您想构建和部署我们的自主研究代理AIPM Researcher，请参考[AIPM Researcher](/docs/gpt-researcher/introduction) 官方文档。
+您也可以通过[这里](/docs/examples/examples)查看演示和示例来获取灵感。
 
-GPT Researcher is built with best practices for leveraging LLMs (prompt engineering, RAG, chains, embeddings, etc), and is optimized for quick and efficient research. It is also fully customizable and can be tailored to your specific needs.
+### AIPM Researcher是什么？
+AIPM Researcher是一个广受欢迎的自主研究代理，它可以为您处理繁琐的研究任务，通过抓取、过滤和汇总每个单一研究任务的20多个网络来源。
 
-To learn more about GPT Researcher, check out the [documentation page](/docs/gpt-researcher/introduction).
-### How much does each research run cost?
-A research task using GPT Researcher costs around $0.01 per a single run (for GPT-4 usage). We're constantly optimizing LLM calls to reduce costs and improve performance. 
-### How do you ensure the report is factual and accurate?
-we do our best to ensure that the information we provide is factual and accurate. We do this by using multiple sources, and by using proprietary AI to score and rank the most relevant and accurate information. We also use proprietary AI to filter out irrelevant information and sources.
+AIPM Researcher的构建采用了利用LLM的最佳实践（提示工程、RAG、链、嵌入等），并针对快速高效的研究进行了优化。它也完全可定制，并可根据您的特定需求进行定制。
 
-Lastly, by using RAG and other techniques, we ensure that the information is relevant to the context of the research task, leading to more accurate generative AI content and reduced hallucinations.
+要了解更多关于AIPM Researcher的信息，请查看[文档页面](/docs/gpt-researcher/introduction)。
 
-### What are your plans for the future?
-We're constantly working on improving our products and services. We're currently working on improving our search API together with design partners, and adding more data sources to our search engine. We're also working on improving our research agent GPT Researcher, and adding more features to it while growing our amazing open source community.
+### 每次研究运行的费用是多少？
+使用AIPM Researcher的研究任务大约是每次运行0.01美元（GPT-4使用费）。我们正在不断优化LLM调用以降低成本并提高性能。
 
-If you're interested in our roadmap or looking to collaborate, check out our [roadmap page](https://trello.com/b/3O7KBePw/gpt-researcher-roadmap). 
+### 如何确保报告的事实性和准确性？
+我们尽最大努力确保我们提供的信息是事实性和准确的。我们通过使用多个来源，并通过使用专有AI对最相关和准确的信息进行评分和排名来实现这一点。我们还使用专有AI过滤掉不相关的信息和来源。
 
-Feel free to [contact us](mailto:assafelovic@gmail.com) if you have any further questions or suggestions!
+最后，通过使用RAG和其他技术，我们确保信息与研究任务的上下文相关，从而实现更准确的生成性AI内容并减少幻觉。
+
+### 你们未来的计划是什么？
+我们一直在努力改进我们的产品和服 务。我们目前正在与设计合作伙伴一起改进我们的搜索API，并向我们的搜索引擎添加更多数据来源。我们也正在改进我们的研究代理AIPM Researcher，并在扩大我们惊人的社区的同时为它增加更多功能。
+
+如果您对我们的发展路线图感兴趣或寻求合作，请查看我们的[社区页面](https://roadmaps.feishu.cn/wiki/RykrwFxPiiU4T7kZ63bc7Lqdnch)。

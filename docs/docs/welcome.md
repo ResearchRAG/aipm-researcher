@@ -1,13 +1,13 @@
-# Welcome
+# 欢迎
 
-Hey there! 👋
+嗨，你好！👋
 
-We're a team of AI researchers and developers who are passionate about building the next generation of AI assistants. 
-Our mission is to empower individuals and organizations with accurate, unbiased, and factual information.
+我们是一支对构建下一代AI助手充满热情的AI研究者和开发人员团队。
+我们的使命是为个人和组织提供准确、无偏见和事实性的信息。
 
-### GPT Researcher
-Quickly accessing relevant and trustworthy information is more crucial than ever. However, we've learned that none of today's search engines provide a suitable tool that provides factual, explicit and objective answers without the need to continuously click and explore multiple sites for a given research task. 
+### AIPM Researcher
+快速获取相关和值得信赖的信息比以往任何时候都更为关键。然而，我们发现，当今的搜索引擎没有一个能够提供适当的工具，能够在不需要不断点击和浏览多个网站的情况下，为特定的研究任务提供事实性、明确和客观的答案。
 
-This is why we've built the trending open source **[GPT Researcher](https://github.com/assafelovic/gpt-researcher)**. GPT Researcher is an autonomous agent that takes care of the tedious task of research for you, by scraping, filtering and aggregating over 20+ web sources per a single research task. 
+这就是为什么我们构建了趋势项目 **[AIPM Researcher]**。AIPM Researcher是一个自主代理，它可以为您处理繁琐的研究任务，通过抓取、过滤和汇总每个单一研究任务的20多个网络来源。
 
-To learn more about GPT Researcher, check out the [documentation page](/docs/gpt-researcher/introduction).
+要了解更多关于AIPM Researcher的信息，请查看[文档页面](/docs/gpt-researcher/introduction)。
