@@ -13,7 +13,7 @@ from gpt_researcher.utils.enum import ReportSource, ReportType, Tone
 
 class GPTResearcher:
     """
-    GPT Researcher
+    AIPM Researcher
     """
 
     def __init__(
@@ -36,7 +36,7 @@ class GPTResearcher:
         headers: dict = None,  # Add headers parameter
     ):
         """
-        Initialize the GPT Researcher class.
+        Initialize the AIPM Researcher class.
         Args:
             query: str,
             report_type: str
@@ -92,7 +92,7 @@ class GPTResearcher:
 
     async def conduct_research(self):
         """
-        Runs the GPT Researcher to conduct research
+        Runs the AIPM Researcher to conduct research
         """
         # Reset visited_urls and source_urls at the start of each research task
         self.visited_urls.clear()

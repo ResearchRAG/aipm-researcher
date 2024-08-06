@@ -1,4 +1,4 @@
-# 🔎 GPT Researcher
+# 🔎 AIPM Researcher
 [![Official Website](https://img.shields.io/badge/Official%20Website-gptr.dev-blue?style=for-the-badge&logo=world&logoColor=white)](https://gptr.dev)
 [![Discord Follow](https://dcbadge.vercel.app/api/server/MN9M86kb?style=for-the-badge)](https://discord.gg/MN9M86kb)
 
@@ -11,13 +11,13 @@
 -  [日本語](README-ja_JP.md)
 
 
-**GPT Researcher 是一个智能体代理，专为各种任务的综合在线研究而设计。**
+**AIPM Researcher 是一个智能体代理，专为各种任务的综合在线研究而设计。**
 
-代理可以生成详细、正式且客观的研究报告，并提供自定义选项，专注于相关资源、结构框架和经验报告。受最近发表的[Plan-and-Solve](https://arxiv.org/abs/2305.04091) 和[RAG](https://arxiv.org/abs/2005.11401) 论文的启发，GPT Researcher 解决了速度、确定性和可靠性等问题，通过并行化的代理运行，而不是同步操作，提供了更稳定的性能和更高的速度。
+代理可以生成详细、正式且客观的研究报告，并提供自定义选项，专注于相关资源、结构框架和经验报告。受最近发表的[Plan-and-Solve](https://arxiv.org/abs/2305.04091) 和[RAG](https://arxiv.org/abs/2005.11401) 论文的启发，AIPM Researcher 解决了速度、确定性和可靠性等问题，通过并行化的代理运行，而不是同步操作，提供了更稳定的性能和更高的速度。
 
 **我们的使命是利用人工智能的力量，为个人和组织提供准确、客观和事实的信息。**
 
-## 为什么选择GPT Researcher?
+## 为什么选择AIPM Researcher?
 
 - 因为人工研究任务形成客观结论可能需要时间和经历，有时甚至需要数周才能找到正确的资源和信息。
 - 目前的LLM是根据历史和过时的信息进行训练的，存在严重的幻觉风险，因此几乎无法胜任研究任务。
@@ -121,7 +121,7 @@ $ uvicorn main:app --reload
 
 ## 🛡 免责声明
 
-本项目 "GPT Researcher "是一个实验性应用程序，按 "现状 "提供，不做任何明示或暗示的保证。我们根据 MIT 许可分享用于学术目的的代码。本文不提供任何学术建议，也不建议在学术或研究论文中使用。
+本项目 "AIPM Researcher "是一个实验性应用程序，按 "现状 "提供，不做任何明示或暗示的保证。我们根据 MIT 许可分享用于学术目的的代码。本文不提供任何学术建议，也不建议在学术或研究论文中使用。
 
 我们对客观研究主张的看法：
 1.  我们抓取系统的全部目的是减少不正确的事实。如何解决？我们抓取的网站越多，错误数据的可能性就越小。我们每项研究都会收集20条信息，它们全部错误的可能性极低。

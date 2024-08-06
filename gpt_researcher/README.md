@@ -1,4 +1,4 @@
-# 🔎 GPT Researcher
+# 🔎 AIPM Researcher
 [![Official Website](https://img.shields.io/badge/Official%20Website-gptr.dev-blue?style=for-the-badge&logo=world&logoColor=white)](https://gptr.dev)
 [![Discord Follow](https://dcbadge.vercel.app/api/server/QgZXvJAccX?style=for-the-badge)](https://discord.com/invite/QgZXvJAccX)
 
@@ -6,15 +6,15 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/tavilyai?style=social)](https://twitter.com/tavilyai)
 [![PyPI version](https://badge.fury.io/py/gpt-researcher.svg)](https://badge.fury.io/py/gpt-researcher)
 
-**GPT Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks.** 
+**AIPM Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks.** 
 
-The agent can produce detailed, factual and unbiased research reports, with customization options for focusing on relevant resources, outlines, and lessons. Inspired by the recent [Plan-and-Solve](https://arxiv.org/abs/2305.04091) and [RAG](https://arxiv.org/abs/2005.11401) papers, GPT Researcher addresses issues of speed, determinism and reliability, offering a more stable performance and increased speed through parallelized agent work, as opposed to synchronous operations.
+The agent can produce detailed, factual and unbiased research reports, with customization options for focusing on relevant resources, outlines, and lessons. Inspired by the recent [Plan-and-Solve](https://arxiv.org/abs/2305.04091) and [RAG](https://arxiv.org/abs/2005.11401) papers, AIPM Researcher addresses issues of speed, determinism and reliability, offering a more stable performance and increased speed through parallelized agent work, as opposed to synchronous operations.
 
 **Our mission is to empower individuals and organizations with accurate, unbiased, and factual information by leveraging the power of AI.**
 
 #### PIP Package
 > **Step 0** - Install Python 3.11 or later. [See here](https://www.tutorialsteacher.com/python/install-python) for a step-by-step guide.
-> **Step 1** - install GPT Researcher package [PyPI page](https://pypi.org/project/gpt-researcher/)
+> **Step 1** - install AIPM Researcher package [PyPI page](https://pypi.org/project/gpt-researcher/)
 ```bash
 $ pip install gpt-researcher
 ```
@@ -25,7 +25,7 @@ $ export OPENAI_API_KEY={Your OpenAI API Key here}
 ```bash
 $ export TAVILY_API_KEY={Your Tavily API Key here}
 ```
-> **Step 3** - Start Coding using GPT Researcher in your own code, example:
+> **Step 3** - Start Coding using AIPM Researcher in your own code, example:
 ```python
 from gpt_researcher import GPTResearcher
 import asyncio

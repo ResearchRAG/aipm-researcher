@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "gpt-researcher"
 version = "0.6.4"
-description = "GPT Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks."
+description = "AIPM Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks."
 authors = ["Assaf Elovic <assaf.elovic@gmail.com>"]
 license = "MIT"
 readme = "README.md"

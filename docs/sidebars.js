@@ -14,7 +14,7 @@
     'welcome',
     {
       type: 'category',
-      label: 'GPT Researcher',
+      label: 'AIPM Researcher',
       collapsible: true,
       collapsed: false,
       items: [

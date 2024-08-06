@@ -4,7 +4,7 @@ Retrievers are search engines used to find the most relevant documents for a giv
 You can specify your preferred web search or use any custom retriever of your choice.
 
 ## Web Search Engines
-GPT Researcher defaults to using the [Tavily](https://app.tavily.com) search engine for retrieving search results. 
+AIPM Researcher defaults to using the [Tavily](https://app.tavily.com) search engine for retrieving search results. 
 But you can also use other search engines by specifying the `RETRIEVER` env var. Please note that each search engine has its own API Key requirements and usage limits.
 
 For example:
@@ -55,4 +55,4 @@ For the custom retriever to work correctly, the response from the endpoint shoul
 
 The system assumes this response format and processes the list of sources accordingly.
 
-Missing a retriever? Feel free to contribute to this project by submitting issues or pull requests on our [GitHub](https://github.com/assafelovic/gpt-researcher) page.
+Missing a retriever? Feel free to contribute to this project by submitting issues or pull requests on our [GitHub](https://github.com/ResearchRAG/aipm-researcher) page.

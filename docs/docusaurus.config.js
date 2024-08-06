@@ -3,7 +3,7 @@ const math = require('remark-math');
 const katex = require('rehype-katex');
 
 module.exports = {
-  title: 'GPT Researcher',
+  title: 'AIPM Researcher',
   tagline: 'The leading autonomous AI research agent',
   url: 'https://docs.gptr.dev',
   baseUrl: '/',
@@ -11,14 +11,14 @@ module.exports = {
   //deploymentBranch: 'master',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'assafelovic',
+  organizationName: 'ResearchRAG',
   trailingSlash: false,
   projectName: 'gpt-researcher',
   themeConfig: {
     navbar: {
-      title: 'GPT Researcher',
+      title: 'AIPM Researcher',
       logo: {
-        alt: 'GPT Researcher',
+        alt: 'AIPM Researcher',
         src: 'img/gptr-logo.png',
       },
       items: [
@@ -42,7 +42,7 @@ module.exports = {
             label: 'Contact',
         },
         {
-          href: 'https://github.com/assafelovic/gpt-researcher',
+          href: 'https://github.com/ResearchRAG/aipm-researcher',
           label: 'GitHub',
           position: 'right',
         },
@@ -64,7 +64,7 @@ module.exports = {
             },
             {
               label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/assafe/',
+              href: 'https://www.linkedin.com/in/theflywheel/',
             },
           ],
         },
@@ -77,12 +77,12 @@ module.exports = {
             },
             {
               label: 'Contact',
-              href: 'mailto:assafelovic@gmail.com',
+              href: 'mailto:ResearchRAG@gmail.com',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} GPT Researcher.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AIPM Researcher.`,
     },
   },
   presets: [
@@ -93,7 +93,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/assafelovic/gpt-researcher/tree/master/docs',
+            'https://github.com/ResearchRAG/aipm-researcher/tree/master/docs',
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },

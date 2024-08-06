@@ -4,7 +4,7 @@ import os
 
 
 class Config:
-    """Config class for GPT Researcher."""
+    """Config class for AIPM Researcher."""
 
     def __init__(self, config_file: str = None):
         """Initialize the config class."""

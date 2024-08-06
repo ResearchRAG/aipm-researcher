@@ -5,7 +5,6 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
-
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -17,20 +16,19 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/gpt-researcher/getting-started">
-            Getting Started - 5 min ⏱️
+            快速开始 - 5分钟 ⏱️
           </Link>
         </div>
       </div>
     </header>
   );
 }
-
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Documentation`}
-      description="GPT Researcher is the leading autonomous agent designed for comprehensive online research on a variety of tasks.">
+      title={`文档`}
+      description="AIPM 研究员是一款领先的自主智能体，专为各种任务的全面在线研究设计。">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

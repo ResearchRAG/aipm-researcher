@@ -1,11 +1,11 @@
 # Introduction
 
-The config.py enables you to customize GPT Researcher to your specific needs and preferences.
+The config.py enables you to customize AIPM Researcher to your specific needs and preferences.
 
-Thanks to our amazing community and contributions, GPT Researcher supports multiple LLMs and Retrievers.
-In addition, GPT Researcher can be tailored to various report formats (such as APA), word count, research iterations depth, etc.
+Thanks to our amazing community and contributions, AIPM Researcher supports multiple LLMs and Retrievers.
+In addition, AIPM Researcher can be tailored to various report formats (such as APA), word count, research iterations depth, etc.
 
-GPT Researcher defaults to our recommended suite of integrations: [OpenAI](https://platform.openai.com/docs/overview) for LLM calls and [Tavily API](https://app.tavily.com) for retrieving realtime online information.
+AIPM Researcher defaults to our recommended suite of integrations: [OpenAI](https://platform.openai.com/docs/overview) for LLM calls and [Tavily API](https://app.tavily.com) for retrieving realtime online information.
 
 As seen below, OpenAI still stands as the superior LLM. We assume it will stay this way for some time, and that prices will only continue to decrease, while performance and speed increase over time.
 
@@ -13,12 +13,12 @@ As seen below, OpenAI still stands as the superior LLM. We assume it will stay t
 <img align="center" height="350" src="/img/leaderboard.png" />
 </div>
 
-The default config.py file can be found in `/gpt_researcher/config/`. It supports various options for customizing GPT Researcher to your needs.
+The default config.py file can be found in `/gpt_researcher/config/`. It supports various options for customizing AIPM Researcher to your needs.
 You can also include your own external JSON file `config.json` by adding the path in the `config_file` param. **Please follow the config.py file for additional future support**.
 
 Below is a list of current supported options:
 
-- **`RETRIEVER`**: Web search engine used for retrieving sources. Defaults to `tavily`. Options: `duckduckgo`, `bing`, `google`, `serper`, `searx`. [Check here](https://github.com/assafelovic/gpt-researcher/tree/master/gpt_researcher/retrievers) for supported retrievers
+- **`RETRIEVER`**: Web search engine used for retrieving sources. Defaults to `tavily`. Options: `duckduckgo`, `bing`, `google`, `serper`, `searx`. [Check here](https://github.com/ResearchRAG/aipm-researcher/tree/master/gpt_researcher/retrievers) for supported retrievers
 - **`EMBEDDING_PROVIDER`**: Provider for embedding model. Defaults to `openai`. Options: `ollama`, `huggingface`, `azureopenai`, `custom`.
 - **`LLM_PROVIDER`**: LLM provider. Defaults to `openai`. Options: `google`, `ollama`, `groq` and much more!
 - **`FAST_LLM_MODEL`**: Model name for fast LLM operations such summaries. Defaults to `gpt-4o-mini`.

@@ -1,7 +1,7 @@
 <div align="center">
 <!--<h1 style="display: flex; align-items: center; gap: 10px;">
   <img src="https://github.com/assafelovic/gpt-researcher/assets/13554167/a45bac7c-092c-42e5-8eb6-69acbf20dde5" alt="Logo" width="25">
-  GPT Researcher
+  AIPM Researcher
 </h1>-->
 <img src="https://github.com/assafelovic/gpt-researcher/assets/13554167/20af8286-b386-44a5-9a83-3be1365139c3" alt="Logo" width="80">
 
@@ -26,13 +26,13 @@
 [日本語](https://github.com/assafelovic/gpt-researcher/blob/master/README-ja_JP.md)
 </div>
 
-**GPT Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks.** 
+**AIPM Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks.** 
 
-The agent can produce detailed, factual and unbiased research reports, with customization options for focusing on relevant resources and outlines. Inspired by the recent [Plan-and-Solve](https://arxiv.org/abs/2305.04091) and [RAG](https://arxiv.org/abs/2005.11401) papers, GPT Researcher addresses issues of misinformation, speed, determinism and reliability, offering a more stable performance and increased speed through parallelized agent work, as opposed to synchronous operations.
+The agent can produce detailed, factual and unbiased research reports, with customization options for focusing on relevant resources and outlines. Inspired by the recent [Plan-and-Solve](https://arxiv.org/abs/2305.04091) and [RAG](https://arxiv.org/abs/2005.11401) papers, AIPM Researcher addresses issues of misinformation, speed, determinism and reliability, offering a more stable performance and increased speed through parallelized agent work, as opposed to synchronous operations.
 
 **Our mission is to empower individuals and organizations with accurate, unbiased, and factual information by leveraging the power of AI.**
 
-## Why GPT Researcher?
+## Why AIPM Researcher?
 
 - To form objective conclusions for manual research tasks can take time, sometimes weeks to find the right resources and information.
 - Current LLMs are trained on past and outdated information, with heavy risks of hallucinations, making them almost irrelevant for research tasks.
@@ -151,7 +151,7 @@ report = await researcher.write_report()
 
 ## 📄 Research on Local Documents
 
-You can instruct the GPT Researcher to run research tasks based on your local documents. Currently supported file formats are: PDF, plain text, CSV, Excel, Markdown, PowerPoint, and Word documents.
+You can instruct the AIPM Researcher to run research tasks based on your local documents. Currently supported file formats are: PDF, plain text, CSV, Excel, Markdown, PowerPoint, and Word documents.
 
 Step 1: Add the env variable `DOC_PATH` pointing to the folder where your documents are located.
 
@@ -161,7 +161,7 @@ export DOC_PATH="./my-docs"
 
 Step 2: 
  - If you're running the frontend app on localhost:8000, simply select "My Documents" from the the "Report Source" Dropdown Options.
- - If you're running GPT Researcher with the [PIP package](https://docs.tavily.com/docs/gpt-researcher/pip-package), pass the `report_source` argument as "documents" when you instantiate the `GPTResearcher` class [code sample here](https://docs.tavily.com/docs/gpt-researcher/tailored-research).
+ - If you're running AIPM Researcher with the [PIP package](https://docs.tavily.com/docs/gpt-researcher/pip-package), pass the `report_source` argument as "documents" when you instantiate the `GPTResearcher` class [code sample here](https://docs.tavily.com/docs/gpt-researcher/tailored-research).
 
 ### One-Click Deployment
 
@@ -189,10 +189,10 @@ Please check out our [roadmap](https://trello.com/b/3O7KBePw/gpt-researcher-road
 
 ## 🛡 Disclaimer
 
-This project, GPT Researcher, is an experimental application and is provided "as-is" without any warranty, express or implied. We are sharing codes for academic purposes under the MIT license. Nothing herein is academic advice, and NOT a recommendation to use in academic or research papers.
+This project, AIPM Researcher, is an experimental application and is provided "as-is" without any warranty, express or implied. We are sharing codes for academic purposes under the MIT license. Nothing herein is academic advice, and NOT a recommendation to use in academic or research papers.
 
 Our view on unbiased research claims:
-1. The main goal of GPT Researcher is to reduce incorrect and biased facts. How? We assume that the more sites we scrape the less chances of incorrect data. By scraping over 20 sites per research, and choosing the most frequent information, the chances that they are all wrong is extremely low.
+1. The main goal of AIPM Researcher is to reduce incorrect and biased facts. How? We assume that the more sites we scrape the less chances of incorrect data. By scraping over 20 sites per research, and choosing the most frequent information, the chances that they are all wrong is extremely low.
 2. We do not aim to eliminate biases; we aim to reduce it as much as possible. **We are here as a community to figure out the most effective human/llm interactions.**
 3. In research, people also tend towards biases as most have already opinions on the topics they research about. This tool scrapes many opinions and will evenly explain diverse views that a biased person would never have read.
 

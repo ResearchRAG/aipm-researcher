@@ -2,55 +2,42 @@ import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import styles from './HomepageFeatures.module.css';
-
 const FeatureList = [
   {
-    title: 'GPT Researcher',
+    title: 'AIPM 研究员',
     Svg: require('../../static/img/gptr-logo.png').default,
     docLink: './docs/gpt-researcher/getting-started',
     description: (
       <>
-        GPT Researcher is an open source autonomous agent designed for comprehensive online research on a variety of tasks.
+        AIPM 研究员是一款自主智能体，专为各种任务的全面在线研究设计。
       </>
     ),
   },
-  /*{
-    title: 'Tavily Search API',
-    Svg: require('../../static/img/tavily.png').default,
-    docLink: './docs/tavily-api/introduction',
-    description: (
-      <>
-        Tavily Search API is a search engine optimized for LLMs, optimized for a factual, efficient, and persistent search experience
-      </>
-    ),
-  },*/
   {
-    title: 'Multi-Agent Assistant',
+    title: '多智能体助手',
     Svg: require('../../static/img/multi-agent.png').default,
     docLink: './docs/gpt-researcher/langgraph',
     description: (
       <>
-        Learn how a team of AI agents can work together to conduct research on a given topic, from planning to publication.
+        了解一组 AI 智能体如何协同工作，从规划到发布对特定主题进行研究。
       </>
     ),
   },
   {
-    title: 'Examples and Demos',
+    title: '示例与演示',
     Svg: require('../../static/img/examples.png').default,
     docLink: './docs/examples/examples',
     description: (
       <>
-          Check out Tavily API in action across multiple frameworks and use cases
+        查看Tavily API在不同框架和用例中的实际应用。
       </>
     ),
   },
 ];
-
 function Feature({Svg, title, description, docLink}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        {/*<Svg className={styles.featureSvg} alt={title} />*/}
         <img src={Svg} alt={title} height="60"/>
       </div>
       <div className="text--center padding-horiz--md">
@@ -62,7 +49,6 @@ function Feature({Svg, title, description, docLink}) {
     </div>
   );
 }
-
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>

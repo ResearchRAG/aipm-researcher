@@ -1,71 +1,71 @@
-# Getting Started
-> **Step 0** - Install Python 3.11 or later. [See here](https://www.tutorialsteacher.com/python/install-python) for a step-by-step guide.
+# 开始使用
+> **步骤 0** - 安装 Python 3.11 或更高版本。[查看这里](https://www.tutorialsteacher.com/python/install-python) 以获取逐步指南。
 
-> **Step 1** - Download the project and navigate to its directory
+> **步骤 1** - 下载项目并导航至项目目录
 
 ```bash
-$ git clone https://github.com/assafelovic/gpt-researcher.git
+$ git clone https://github.com/ResearchRAG/aipm-researcher.git 
 $ cd gpt-researcher
 ```
 
-> **Step 3** - Set up API keys using two methods: exporting them directly or storing them in a `.env` file.
+> **步骤 3** - 使用两种方法设置 API 密钥：直接导出它们或将它们存储在 `.env` 文件中。
 
-For Linux/Temporary Windows Setup, use the export method:
+对于 Linux/临时 Windows 设置，请使用导出方法：
 
 ```bash
-export OPENAI_API_KEY={Your OpenAI API Key here}
-export TAVILY_API_KEY={Your Tavily API Key here}
+export OPENAI_API_KEY={您的OpenAI API密钥}
+export TAVILY_API_KEY={您的Tavily API密钥}
 ```
 
-For a more permanent setup, create a `.env` file in the current `gpt-researcher` directory and input the env vars (without `export`).
+对于更持久的设置，在当前 `gpt-researcher` 目录中创建一个 `.env` 文件，并输入环境变量（不带 `export`）。
 
-- For LLM provider, we recommend **[OpenAI GPT](https://platform.openai.com/docs/guides/gpt)**, but you can use any other LLM model (including open sources). To learn how to change the LLM model, please refer to the [documentation](https://docs.gptr.dev/docs/gpt-researcher/llms) page. 
-- For web search API, we recommend **[Tavily Search API](https://app.tavily.com)**, but you can also refer to other search APIs of your choice by changing the search provider in config/config.py to `duckduckgo`, `google`, `bing`, `serper`, `searx` and more. Then add the corresponding env API key.
+- 对于 LLM 提供商，我们推荐使用 **[OpenAI GPT](https://platform.openai.com/docs/guides/gpt)**，但您可以使用任何其他 LLM 模型（包括开源模型）。要了解如何更改 LLM 模型，请参阅[文档](https://docs.gptr.dev/docs/gpt-researcher/llms)页面。
+- 对于网络搜索 API，我们推荐使用 **[Tavily Search API](https://app.tavily.com)**，但您也可以通过更改 config/config.py 中的搜索提供程序为 `duckduckgo`、`google`、`bing`、`serper`、`searx` 等来选择其他搜索 API。然后添加相应的环境变量 API 密钥。
 
-## Quickstart
+## 快速开始
 
-> **Step 1** - Install dependencies
+> **步骤 1** - 安装依赖项
 
 ```bash
 $ pip install -r requirements.txt
 ```
 
-> **Step 2** - Run the agent with FastAPI
+> **步骤 2** - 使用 FastAPI 运行代理
 
 ```bash
 $ uvicorn main:app --reload
 ```
 
-> **Step 3** - Go to http://localhost:8000 on any browser and enjoy researching!
+> **步骤 3** - 在任何浏览器中访问 http://localhost:8000，开始研究！
 
-## Using Virtual Environment or Poetry
-Select either based on your familiarity with each:
+## 使用虚拟环境或 Poetry
+根据您的熟悉程度选择：
 
-### Virtual Environment
+### 虚拟环境
 
-#### *Establishing the Virtual Environment with Activate/Deactivate configuration*
+#### *建立带有激活/停用配置的虚拟环境*
 
-Create a virtual environment using the `venv` package with the environment name `<your_name>`, for example, `env`. Execute the following command in the PowerShell/CMD terminal:
+使用 `venv` 包创建名为 `<your_name>` 的虚拟环境，例如 `env`。在 PowerShell/CMD 终端中执行以下命令：
 
 ```bash
 python -m venv env
 ```
 
-To activate the virtual environment, use the following activation script in PowerShell/CMD terminal:
+在 PowerShell/CMD 终端中使用以下激活脚本激活虚拟环境：
 
 ```bash
 .\env\Scripts\activate
 ```
 
-To deactivate the virtual environment, run the following deactivation script in PowerShell/CMD terminal:
+在 PowerShell/CMD 终端中运行以下停用脚本停用虚拟环境：
 
 ```bash
 deactivate
 ```
 
-#### *Install the dependencies for a Virtual environment*
+#### *为虚拟环境安装依赖项*
 
-After activating the `env` environment, install dependencies using the `requirements.txt` file with the following command:
+激活 `env` 环境后，使用以下命令安装依赖项：
 
 ```bash
 python -m pip install -r requirements.txt
@@ -75,48 +75,47 @@ python -m pip install -r requirements.txt
 
 ### Poetry
 
-#### *Establishing the Poetry dependencies and virtual environment with Poetry version `~1.7.1`*
+#### *使用 Poetry 版本 `~1.7.1` 建立 Poetry 依赖项和虚拟环境*
 
-Install project dependencies and simultaneously create a virtual environment for the specified project. By executing this command, Poetry reads the project's "pyproject.toml" file to determine the required dependencies and their versions, ensuring a consistent and isolated development environment. The virtual environment allows for a clean separation of project-specific dependencies, preventing conflicts with system-wide packages and enabling more straightforward dependency management throughout the project's lifecycle.
+安装项目依赖项，并同时为指定项目创建虚拟环境。执行此命令时，Poetry 读取项目的 "pyproject.toml" 文件以确定所需的依赖项及其版本，确保一致且隔离的开发环境。虚拟环境允许干净地分离项目特定的依赖项，防止与系统范围的包发生冲突，并实现整个项目生命周期中更简单的依赖项管理。
 
 ```bash
 poetry install
 ```
 
-#### *Activate the virtual environment associated with a Poetry project*
+#### *激活与 Poetry 项目关联的虚拟环境*
 
-By running this command, the user enters a shell session within the isolated environment associated with the project, providing a dedicated space for development and execution. This virtual environment ensures that the project dependencies are encapsulated, avoiding conflicts with system-wide packages. Activating the Poetry shell is essential for seamlessly working on a project, as it ensures that the correct versions of dependencies are used and provides a controlled environment conducive to efficient development and testing.
+运行此命令后，用户将进入与项目关联的隔离环境中的 shell 会话，为开发和执行提供专用空间。此虚拟环境确保项目依赖项被封装，避免与系统范围的包发生冲突。激活 Poetry shell 对于无缝工作于项目至关重要，因为它确保使用正确版本的依赖项，并提供有利于高效开发和测试的受控环境。
 
 ```bash
 poetry shell
 ```
 
-### *Run the app*
-> Launch the FastAPI application agent on a *Virtual Environment or Poetry* setup by executing the following command:
+### *运行应用程序*
+在 *虚拟环境或 Poetry* 设置上通过执行以下命令启动 FastAPI 应用程序代理：
 ```bash
 python -m uvicorn main:app --reload
 ```
-> Visit http://localhost:8000 in any web browser and explore your research!
+在任何网络浏览器中访问 http://localhost:8000，开始探索你的研究！
 
 <br />
 
+## 使用 Docker 尝试
 
-## Try it with Docker
+> **步骤 1** - 安装 Docker
 
-> **Step 1** - Install Docker
+按照 https://docs.docker.com/engine/install/ 上的说明操作
 
-Follow instructions at https://docs.docker.com/engine/install/
-
-> **Step 2** - Create .env file with your OpenAI Key or simply export it
+> **步骤 2** - 创建 `.env` 文件并输入您的 OpenAI 密钥，或者直接导出它
 
 ```bash
-$ export OPENAI_API_KEY={Your API Key here}
+$ export OPENAI_API_KEY={您的API密钥}
 ```
 
-> **Step 3** - Run the application
+> **步骤 3** - 运行应用程序
 
 ```bash
 $ docker-compose up
 ```
 
-> **Step 4** - Go to http://localhost:8000 on any browser and enjoy researching!
+> **步骤 4** - 在任何浏览器中访问 http://localhost:8000，开始研究！
