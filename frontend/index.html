@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
-    <title>AIPM Researcher</title>
-    <meta name="description" content="A research assistant powered by GPT-4">
+    <title>AIPM 研究员</title>
+    <meta name="description" content="由大型语言模型（LLM）提供支持的研究助手">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./static/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,127 +43,112 @@
     <section class="landing">
         <div class="max-w-5xl mx-auto text-center">
             <h1 class="text-4xl font-extrabold mx-auto lg:text-7xl">
-                Say Goodbye to <br>
-                <span
-                    style="background-image:linear-gradient(to right, #9867F0, #ED4E50); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hours
-                    of Research</span>
+                告别<br>
+                <span style="background-image:linear-gradient(to right, #9867F0, #ED4E50); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">研究的漫长时光</span>
             </h1>
             <p class="max-w-5xl mx-auto text-gray-600 mt-8" style="font-size:20px">
-                Say Hello to AIPM Researcher, your AI mate for rapid insights and comprehensive research. AIPM Researcher
-                takes care of everything from accurate source gathering to organization of research results - all in one
-                platform designed to make your research process a breeze.
+                欢迎使用 AIPM 研究员，您的 AI 伙伴，为您提供快速洞察和全面研究。AIPM 研究员负责从精确的资料收集到研究结果的组织整理 —— 一切尽在这个旨在让您的研究过程变得轻松的平台上。
             </p>
-            <a href="#form" class="btn btn-primary">Get Started</a>
+            <a href="#form" class="btn btn-primary">开始使用</a>
         </div>
     </section>
 
     <main class="container" id="form">
-        <div class="agent-item"><img src="/static/gptr-logo.png" class="avatar" alt="Auto Agent"></div>
+        <!-- 代理信息 -->
+        <div class="agent-item"><img src="/static/gptr-logo.png" class="avatar" alt="自动代理"></div>
+        <!-- 研究表单 -->
         <form method="POST" class="mt-3" onsubmit="GPTResearcher.startResearch(); return false;">
+            <!-- 研究任务 -->
             <div class="form-group">
-                <label for="task" class="agent-question">What would you like me to research next?</label>
+                <label for="task" class="agent-question">您希望我接下来研究什么主题？</label>
                 <input id="task" name="task" class="form-control" required>
-                <input type="radio" name="agent" id="autoAgent" value="Auto Agent" checked hidden>
+                <input type="radio" name="agent" id="autoAgent" value="自动代理" checked hidden>
             </div>
             <div class="form-group">
                 <div class="row">
-
-
                 </div>
                 <button type="button" id="btnShowAuto" class="btn btn-secondary mt-3 btn-show">Auto Agent</button>
             </div>
+            <!-- 报告类型 -->
             <div class="form-group">
-                <label for="report_type" class="agent-question">What type of report would you like me to
-                    generate?</label>
+                <label for="report_type" class="agent-question">您希望我生成哪种类型的报告？</label>
                 <select name="report_type" class="form-control" required>
-                    <option value="research_report">Summary - Short and fast (~2 min)</option>
-                    <option value="detailed_report">Detailed - In depth and longer (~5 min)</option>
-                    <option value="resource_report">Resource Report</option>
+                    <option value="research_report">摘要 - 简短快速（约 2 分钟）</option>
+                    <option value="detailed_report">详细 - 深入详尽（约 5 分钟）</option>
+                    <option value="resource_report">资源报告</option>
                 </select>
             </div>
+            <!-- 报告语调 -->
             <div class="form-group">
-                <label for="tone" class="agent-question">In which tone would you like the report to be
-                    generated?</label>
+                <label for="tone" class="agent-question">您希望报告以何种语调生成？</label>
                 <select name="tone" id="tone" class="form-control" required>
-                    <option value="Objective">Objective - Impartial and unbiased presentation of facts and findings
-                    </option>
-                    <option value="Formal">Formal - Adheres to academic standards with sophisticated language and
-                        structure</option>
-                    <option value="Analytical">Analytical - Critical evaluation and detailed examination of data and
-                        theories</option>
-                    <option value="Persuasive">Persuasive - Convincing the audience of a particular viewpoint or
-                        argument</option>
-                    <option value="Informative">Informative - Providing clear and comprehensive information on a topic
-                    </option>
-                    <option value="Explanatory">Explanatory - Clarifying complex concepts and processes</option>
-                    <option value="Descriptive">Descriptive - Detailed depiction of phenomena, experiments, or case
-                        studies</option>
-                    <option value="Critical">Critical - Judging the validity and relevance of the research and its
-                        conclusions</option>
-                    <option value="Comparative">Comparative - Juxtaposing different theories, data, or methods to
-                        highlight differences and similarities</option>
-                    <option value="Speculative">Speculative - Exploring hypotheses and potential implications or future
-                        research directions</option>
-                    <option value="Reflective">Reflective - Considering the research process and personal insights or
-                        experiences</option>
-                    <option value="Narrative">Narrative - Telling a story to illustrate research findings or
-                        methodologies</option>
-                    <option value="Humorous">Humorous - Light-hearted and engaging, usually to make the content more
-                        relatable</option>
-                    <option value="Optimistic">Optimistic - Highlighting positive findings and potential benefits
-                    </option>
-                    <option value="Pessimistic">Pessimistic - Focusing on limitations, challenges, or negative outcomes
-                    </option>
+                    <!-- 语调选项 -->
+                    <option value="Objective">客观 - 公正无私地陈述事实和发现</option>
+                    <option value="Formal">正式 - 遵守学术标准，使用复杂的语言和结构</option>
+                    <option value="Analytical">分析性 - 对数据和理论进行批判性评估和详细审查</option>
+                    <option value="Persuasive">说服性 - 使受众信服特定观点或论点</option>
+                    <option value="Informative">信息性 - 提供清晰全面的课题信息</option>
+                    <option value="Explanatory">解释性 - 阐明复杂概念和流程</option>
+                    <option value="Descriptive">描述性 - 对现象、实验或案例研究进行详细描述</option>
+                    <option value="Critical">批判性 - 评估研究及其结论的有效性和相关性</option>
+                    <option value="Comparative">比较性 - 对比不同的理论、数据或方法，突出差异和相似之处</option>
+                    <option value="Speculative">推测性 - 探索假设和潜在的影响或未来研究方向</option>
+                    <option value="Reflective">反思性 - 考虑研究过程及个人见解或经历</option>
+                    <option value="Narrative">叙述性 - 讲述故事以说明研究发现或方法论</option>
+                    <option value="Humorous">幽默性 - 轻松愉快且引人入胜，通常使内容更易于亲近</option>
+                    <option value="Optimistic">乐观性 - 突出积极的发现和潜在益处</option>
+                    <option value="Pessimistic">悲观性 - 关注局限性、挑战或负面结果</option>
                 </select>
             </div>
+            <!-- 研究来源 -->
             <div class="form-group">
-                <label for="report_source" class="agent-question">What sources would you like me to research
-                    from?</label>
-                <p class="text-left mt-0 pt-0" style="font-size: 0.7rem;">You can now do research on local documents as
-                    well. Please make sure to add the DOC_PATH env variable pointing to your documents folder.</p>
+                <label for="report_source" class="agent-question">您希望我从哪些来源进行研究？</label>
+                <p class="text-left mt-0 pt-0" style="font-size: 0.7rem;">您现在也可以对本地文档进行研究。请确保添加指向您文档文件夹的 DOC_PATH 环境变量。</p>
                 <select name="report_source" class="form-control" required>
-                    <option value="web">The Web</option>
-                    <option value="local">My Documents</option>
+                    <option value="web">网络</option>
+                    <option value="local">我的文档</option>
                 </select>
             </div>
-            <input type="submit" value="Research" class="btn btn-primary button-padding">
+            <input type="submit" value="开始研究" class="btn btn-primary button-padding">
         </form>
 
+        <!-- 代理输出 -->
         <div class="margin-div">
-            <h2>Agent Output</h2>
-            <p class="mt-2 text-left" style="font-size: 0.8rem;">An agent tailored specifically to your task
-                will be generated to provide the most precise and relevant research results.</p>
+            <h2>代理输出</h2>
+            <p class="mt-2 text-left" style="font-size: 0.8rem;">将为您的任务生成特定代理，以提供最精确和相关的研究结果。</p>
             <div id="output"></div>
         </div>
+        <!-- 研究报告 -->
         <div class="margin-div">
-            <h2>Research Report</h2>
+            <h2>研究报告</h2>
             <div id="reportContainer"></div>
             <div id="reportActions">
+                <!-- 报告操作 -->
                 <div class="alert alert-info" role="alert" id="status"></div>
                 <a id="copyToClipboard" onclick="GPTResearcher.copyToClipboard()" class="btn btn-secondary mt-3"
-                    style="margin-right: 10px;">Copy to clipboard (markdown)</a>
+                    style="margin-right: 10px;">复制到剪贴板（markdown）</a>
                 <a id="downloadLinkMd" href="#" class="btn btn-secondary mt-3" style="margin-right: 10px;"
-                    target="_blank">Download as Markdown</a>
+                    target="_blank">下载为 Markdown</a>
                 <a id="downloadLink" href="#" class="btn btn-secondary mt-3" style="margin-right: 10px;"
-                    target="_blank">Download as PDF</a>
-                <a id="downloadLinkWord" href="#" class="btn btn-secondary mt-3" target="_blank">Download as Docx</a>
+                    target="_blank">下载为 PDF</a>
+                <a id="downloadLinkWord" href="#" class="btn btn-secondary mt-3" target="_blank">下载为 Docx</a>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>AIPM Researcher &copy; 2024 | <a target="_blank" href="https://github.com/assafelovic/gpt-researcher">GitHub
-                Page</a></p>
+        <p>AIPM 研究员 &copy; 2024 | <a target="_blank" href="https://github.com/ResearchRAG/aipm-researcher">GitHub 🌿</a></p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <!-- 脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script> 
     <script src="/site/scripts.js"></script>
     <script>
         // const btnChoose = document.getElementById('btnChoose');
         const btnShowAuto = document.getElementById('btnShowAuto');
         const autoAgentDiv = document.getElementById('autoAgentDiv');
         const agentChoices = document.getElementsByClassName('agent-choices');
-
+    
         /**
         btnChoose.addEventListener('click', function () {
             btnShowAuto.style.display = 'inline-block';
@@ -172,26 +157,27 @@
             agentChoices[0].style.display = 'flex';
         });
         **/
-
+        
         btnShowAuto.addEventListener('click', function () {
-            btnShowAuto.style.display = 'none';
-            btnChoose.style.display = 'inline-block';
-            autoAgentDiv.style.display = 'flex';
-            agentChoices[0].style.display = 'none';
+            btnShowAuto.style.display = 'none'; // 隐藏“自动代理”按钮
+            btnChoose.style.display = 'inline-block'; // 显示选择按钮
+            autoAgentDiv.style.display = 'flex'; // 显示自动代理区域
+            agentChoices[0].style.display = 'none'; // 隐藏代理选择
         });
-
+    
         const tagsInput = document.getElementById('tags-input');
         const input = document.getElementById('custom_source');
-
+    
         input.addEventListener('keypress', function (e) {
             if ((e.key === 'Enter' || e.key === ",") && input.value !== '') {
-                e.preventDefault();
-                GPTResearcher.addTag(input.value);
-                input.value = '';
+            // if ((e.key === 'Enter' || e.key === ',') && input.value.trim() !== '') {
+                e.preventDefault(); // 阻止默认行为
+                GPTResearcher.addTag(input.value); // 添加标签
+                input.value = ''; // 清空输入框
             }
         });
-
-</script>
+    
+    </script>
 </body>
 
 </html>

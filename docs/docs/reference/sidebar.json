@@ -5,7 +5,7 @@
         "reference/config/config",
         "reference/config/singleton"
       ],
-      "label": "config",
+      "label": "配置",
       "type": "category"
     },
     {
@@ -13,10 +13,10 @@
         "reference/processing/html",
         "reference/processing/text"
       ],
-      "label": "processing",
+      "label": "处理",
       "type": "category"
     }
   ],
-  "label": "Reference",
+  "label": "参考",
   "type": "category"
 }

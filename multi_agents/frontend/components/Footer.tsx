@@ -17,7 +17,7 @@ const Footer = ({ setChatBoxSettings, chatBoxSettings}) => {
                 height={35}
               />{" "}
           </Link>
-          <Link href={"https://github.com/assafelovic/gpt-researcher"} target="_blank">
+          <Link href={"https://github.com/ResearchRAG/aipm-researcher"} target="_blank">
             <Image
               src={"/img/github-blue.svg"}
               alt="github"

@@ -2,7 +2,7 @@
 name = "gpt-researcher"
 version = "0.6.4"
 description = "AIPM Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks."
-authors = ["Assaf Elovic <assaf.elovic@gmail.com>"]
+authors = ["Loi Ng <ai.flyingwheel@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 

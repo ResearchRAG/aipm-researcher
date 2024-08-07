@@ -8,7 +8,7 @@ const inter = Lexend({ subsets: ["latin"] });
 let title = "AIPM Researcher";
 let description =
   "A research assistant vanquishing hallucinations";
-let url = "https://github.com/assafelovic/gpt-researcher";
+let url = "https://github.com/ResearchRAG/aipm-researcher";
 let ogimage = "/favicon.ico";
 let sitename = "AIPM Researcher";
 

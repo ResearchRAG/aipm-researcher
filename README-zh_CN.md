@@ -2,8 +2,8 @@
 [![Official Website](https://img.shields.io/badge/Official%20Website-gptr.dev-blue?style=for-the-badge&logo=world&logoColor=white)](https://gptr.dev)
 [![Discord Follow](https://dcbadge.vercel.app/api/server/MN9M86kb?style=for-the-badge)](https://discord.gg/MN9M86kb)
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/assafelovic/gpt-researcher?style=social)](https://github.com/assafelovic/gpt-researcher)
-[![Twitter Follow](https://img.shields.io/twitter/follow/assaf_elovic?style=social)](https://twitter.com/assaf_elovic)
+[![GitHub Repo stars](https://img.shields.io/github/stars/ResearchRAG/aipm-researcher?style=social)](https://github.com/ResearchRAG/aipm-researcher)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ai_flyingwheel?style=social)](https://twitter.com/ai_flyingwheel)
 [![PyPI version](https://badge.fury.io/py/gpt-researcher.svg)](https://badge.fury.io/py/gpt-researcher)
 
 -  [English](README.md)
@@ -41,7 +41,7 @@
 * 最后，对所有汇总的资料来源进行过滤和汇总，并生成最终研究报告。
 
 ## 演示
-https://github.com/assafelovic/gpt-researcher/assets/13554167/a00c89a6-a295-4dd0-b58d-098a31c40fda
+https://github.com/ResearchRAG/aipm-researcher/assets/13554167/a00c89a6-a295-4dd0-b58d-098a31c40fda
 
 ## 教程
  - [运行原理](https://docs.gptr.dev/blog/building-gpt-researcher)
@@ -73,7 +73,7 @@ https://github.com/assafelovic/gpt-researcher/assets/13554167/a00c89a6-a295-4dd0
 > **步骤 1** - 下载项目
 
 ```bash
-$ git clone https://github.com/assafelovic/gpt-researcher.git
+$ git clone https://github.com/ResearchRAG/aipm-researcher.git
 $ cd gpt-researcher
 ```
 
@@ -133,11 +133,11 @@ $ uvicorn main:app --reload
 ---
 
 <p align="center">
-<a href="https://star-history.com/#assafelovic/gpt-researcher">
+<a href="https://star-history.com/#ResearchRAG/aipm-researcher">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=assafelovic/gpt-researcher&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=assafelovic/gpt-researcher&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=assafelovic/gpt-researcher&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ResearchRAG/aipm-researcher&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ResearchRAG/aipm-researcher&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ResearchRAG/aipm-researcher&type=Date" />
   </picture>
 </a>
 </p>

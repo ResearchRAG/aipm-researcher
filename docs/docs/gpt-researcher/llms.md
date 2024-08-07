@@ -1,115 +1,111 @@
-# Configure LLM
-As described in the [introduction](/docs/gpt-researcher/config), the default LLM is OpenAI due to its superior performance and speed. 
-With that said, AIPM Researcher supports various open/closed source LLMs, and you can easily switch between them by adding the `LLM_PROVIDER` env variable and corresponding configuration params.
-Current supported LLMs are `openai`, `google` (gemini), `azureopenai`, `ollama`, `anthropic`, `mistral`, `huggingface` and `groq`.
+# 配置语言模型（LLM）
 
-Using any model will require at least updating the `LLM_PROVIDER` param and passing the LLM provider API Key. You might also need to update the `SMART_LLM_MODEL` and `FAST_LLM_MODEL` env vars.
-To learn more about support customization options see [here](/gpt-researcher/config).
+如[介绍](/docs/gpt-researcher/config)中所述，由于其卓越的性能和速度，OpenAI 是默认的语言模型（LLM）。话虽如此，AIPM 研究员支持各种开源/闭源 LLM，您可以通过添加 `LLM_PROVIDER` 环境变量和相应的配置参数轻松在它们之间切换。
+当前支持的 LLM 有 `openai`、`google`（Gemini）、`azureopenai`、`ollama`、`anthropic`、`mistral`、`huggingface` 和 `groq`。
 
-**Please note**: AIPM Researcher is optimized and heavily tested on GPT models. Some other models might run intro context limit errors, and unexpected responses.
-Please provide any feedback in our [Discord community](https://discord.gg/DUmbTebB) channel, so we can better improve the experience and performance.
+使用任何模型至少需要更新 `LLM_PROVIDER` 参数并传递 LLM 提供者 API 密钥。您可能还需要更新 `SMART_LLM_MODEL` 和 `FAST_LLM_MODEL` 环境变量。
+要了解更多支持定制选项，请看[这里](/gpt-researcher/config)。
 
-Below you can find examples for how to configure the various supported LLMs.
+**请注意**：AIPM 研究员在 GPT 模型上进行了优化和大量测试。其他一些模型可能会遇到上下文限制错误和意外响应。
+请在我们的[Discord 社区](https://discord.gg/DUmbTebB)频道提供任何反馈，以便我们更好地改进体验和性能。
 
-## Custom OpenAI
-Create a local OpenAI API using [llama.cpp Server](https://github.com/ggerganov/llama.cpp/blob/master/examples/server/README.md#quick-start).
+下面您可以找到如何配置各种支持的 LLM 的示例。
 
-### Custom OpenAI API LLM
+## 自定义 OpenAI
+使用 [llama.cpp 服务器](https://github.com/ggerganov/llama.cpp/blob/master/examples/server/README.md#quick-start) 创建本地 OpenAI API。
+
+### 自定义 OpenAI API LLM
 ```bash
-# use a custom OpenAI API LLM provider
+# 使用自定义 OpenAI API LLM 提供者
 LLM_PROVIDER="openai"
 
-# set the custom OpenAI API url
+# 设置自定义 OpenAI API url
 OPENAI_BASE_URL="http://localhost:1234/v1"
-# set the custom OpenAI API key
-OPENAI_API_KEY="Your Key"
+# 设置自定义 OpenAI API 密钥
+OPENAI_API_KEY="您的密钥"
 
-# specify the custom OpenAI API llm model  
+# 指定自定义 OpenAI API llm 模型  
 FAST_LLM_MODEL="gpt-4o-mini"
-# specify the custom OpenAI API llm model  
+# 指定自定义 OpenAI API llm 模型  
 SMART_LLM_MODEL="gpt-4o"
-
 ```
-### Custom OpenAI API Embedding
+### 自定义 OpenAI API 嵌入
 ```bash
-# use a custom OpenAI API EMBEDDING provider
+# 使用自定义 OpenAI API 嵌入提供者
 EMBEDDING_PROVIDER="custom"
 
-# set the custom OpenAI API url
+# 设置自定义 OpenAI API url
 OPENAI_BASE_URL="http://localhost:1234/v1"
-# set the custom OpenAI API key
-OPENAI_API_KEY="Your Key"
+# 设置自定义 OpenAI API 密钥
+OPENAI_API_KEY="您的密钥"
 
-# specify the custom OpenAI API embedding model   
+# 指定自定义 OpenAI API 嵌入模型   
 OPENAI_EMBEDDING_MODEL="custom_model"
 ```
 
 ### Azure OpenAI
-
 ```bash
 EMBEDDING_PROVIDER="azureopenai"
-AZURE_OPENAI_API_KEY="Your key"
+AZURE_OPENAI_API_KEY="您的密钥"
 ```
-
 
 ## Ollama
 
-AIPM Researcher supports both Ollama LLMs and embeddings. You can choose each or both.
-To use [Ollama](http://www.ollama.com) you can set the following environment variables
+AIPM 研究员支持 Ollama LLM 和嵌入。您可以选择其中之一或全部。
+使用 [Ollama](http://www.ollama.com)，您可以设置以下环境变量
 
 ```bash
-# Use ollama for both, LLM and EMBEDDING provider
+# 将 Ollama 用作 LLM 和嵌入提供者
 LLM_PROVIDER=ollama
 
-# Ollama endpoint to use
+# 要使用的 Ollama 端点
 OLLAMA_BASE_URL=http://localhost:11434
 
-# Specify one of the LLM models supported by Ollama
+# 指定 Ollama 支持的 LLM 模型之一
 FAST_LLM_MODEL=llama3
-# Specify one of the LLM models supported by Ollama 
+# 指定 Ollama 支持的 LLM 模型之一 
 SMART_LLM_MODEL=llama3 
-# The temperature to use, defaults to 0.55
+# 要使用的温度，默认为 0.55
 TEMPERATURE=0.55
 ```
 
-**Optional** - You can also use ollama for embeddings
+**可选** - 您也可以使用 ollama 进行嵌入
 ```bash
 EMBEDDING_PROVIDER=ollama
-# Specify one of the embedding models supported by Ollama 
+# 指定 Ollama 支持的嵌入模型之一 
 OLLAMA_EMBEDDING_MODEL=nomic-embed-text
 ```
 
 ## Groq
 
-GroqCloud provides advanced AI hardware and software solutions designed to deliver amazingly fast AI inference performance.
-To leverage Groq in GPT-Researcher, you will need a GroqCloud account and an API Key. (__NOTE:__ Groq has a very _generous free tier_.)
+GroqCloud 提供高级 AI 硬件和软件解决方案，旨在实现惊人的快速 AI 推理性能。
+要在 GPT-Researcher 中利用 Groq，您将需要一个 GroqCloud 账户和一个 API 密钥。（_注：__ Groq 有一个非常 _慷慨的免费层_。）
 
-### Sign up
-- You can signup here: [https://console.groq.com/login](https://console.groq.com/login)
-- Once you are logged in, you can get an API Key here: [https://console.groq.com/keys](https://console.groq.com/keys)
+### 注册
+- 您可以在此处注册：[https://console.groq.com/login](https://console.groq.com/login) 
+- 登录后，您可以在此处获取 API 密钥：[https://console.groq.com/keys](https://console.groq.com/keys) 
 
-- Once you have an API key, you will need to add it to your `systems environment` using the variable name:
-`GROQ_API_KEY="*********************"`
+- 一旦您拥有 API 密钥，您需要使用变量名 `GROQ_API_KEY="*********************"` 添加到您的 `系统环境`。
 
-### Update env vars
-And finally, you will need to configure the GPT-Researcher Provider and Model variables:
+### 更新环境变量
+最后，您需要配置 GPT-Researcher 提供者和模型变量：
 
 ```bash
-# To use Groq set the llm provider to groq
+# 要使用 Groq，将 llm 提供者设置为 groq
 LLM_PROVIDER=groq
-GROQ_API_KEY=[Your Key]
+GROQ_API_KEY=[您的密钥]
 
-# Set one of the LLM models supported by Groq
+# 设置 Groq 支持的 LLM 模型之一
 FAST_LLM_MODEL=Mixtral-8x7b-32768
 
-# Set one of the LLM models supported by Groq
+# 设置 Groq 支持的 LLM 模型之一
 SMART_LLM_MODEL=Mixtral-8x7b-32768 
 
-# The temperature to use defaults to 0.55
+# 要使用的温度，默认为 0.55
 TEMPERATURE=0.55
 ```
 
-__NOTE:__ As of the writing of this Doc (May 2024), the available Language Models from Groq are:
+_注：__ 截至本文档撰写之时（2024 年 5 月），Groq 提供的语言模型包括：
 
 * Llama3-70b-8192
 * Llama3-8b-8192
@@ -117,61 +113,55 @@ __NOTE:__ As of the writing of this Doc (May 2024), the available Language Model
 * Gemma-7b-it
 
 ## Anthropic
-[Anthropic](https://www.anthropic.com/) is an AI safety and research company, and is the creator of Claude. This page covers all integrations between Anthropic models and LangChain.
+[Anthropic](https://www.anthropic.com/) 是一家专注于 AI 安全和研究的公司，也是 Claude 的创造者。此页面涵盖了 Anthropic 模型与 LangChain 之间的所有集成。
 
 ```bash
 LLM_PROVIDER=anthropic
-ANTHROPIC_API_KEY=[Your key]
+ANTHROPIC_API_KEY=[您的密钥]
 ```
 
-You can then define the fast and smart LLM models for example:
-```bash
-FAST_LLM_MODEL=claude-2.1
-SMART_LLM_MODEL=claude-3-opus-20240229
-```
-
-You can then define the fast and smart LLM models for example:
+然后，您可以定义快速和智能 LLM 模型，例如：
 ```bash
 FAST_LLM_MODEL=claude-2.1
 SMART_LLM_MODEL=claude-3-opus-20240229
 ```
 
 ## Mistral
-Sign up for a [Mistral API key](https://console.mistral.ai/users/api-keys/). 
-Then update the corresponding env vars, for example:
+注册 [Mistral API 密钥](https://console.mistral.ai/users/api-keys/)。
+然后更新相应的环境变量，例如：
 ```bash
 LLM_PROVIDER=mistral
-ANTHROPIC_API_KEY=[Your key]
+ANTHROPIC_API_KEY=[您的密钥]
 FAST_LLM_MODEL=open-mistral-7b
 SMART_LLM_MODEL=mistral-large-latest
 ```
 
 ## Together AI
-[Together AI](https://www.together.ai/) offers an API to query [50+ leading open-source models](https://docs.together.ai/docs/inference-models) in a couple lines of code.
-Then update corresponding env vars, for example:
+[Together AI](https://www.together.ai/) 提供了一个 API，可以在几行代码中查询 [50+ 领先的开源模型](https://docs.together.ai/docs/inference-models)。
+然后更新相应的环境变量，例如：
 ```bash
 LLM_PROVIDER=together
-TOGETHER_API_KEY=[Your key]
+TOGETHER_API_KEY=[您的密钥]
 FAST_LLM_MODEL=meta-llama/Llama-3-8b-chat-hf
 SMART_LLM_MODEL=meta-llama/Llama-3-70b-chat-hf
 ```
 
 ## HuggingFace
-This integration requires a bit of extra work. Follow [this guide](https://python.langchain.com/v0.1/docs/integrations/chat/huggingface/) to learn more.
-After you've followed the tutorial above, update the env vars:
+这种集成需要一些额外的工作。按照[此指南](https://python.langchain.com/v0.1/docs/integrations/chat/huggingface/)了解更多。
+按照上述教程后，更新环境变量：
 
 ```bash
 LLM_PROVIDER=huggingface
-HUGGINGFACE_API_KEY=[Your key]
+HUGGINGFACE_API_KEY=[您的密钥]
 FAST_LLM_MODEL=HuggingFaceH4/zephyr-7b-beta
 SMART_LLM_MODEL=HuggingFaceH4/zephyr-7b-beta
 ```
 
 ## Google Gemini
-Sign up [here](https://ai.google.dev/gemini-api/docs/api-key) for obtaining a Google Gemini API Key and update the following env vars:
+[此处](https://ai.google.dev/gemini-api/docs/api-key) 注册以获取 Google Gemini API 密钥并更新以下环境变量：
 
-Please make sure to update fast and smart models to corresponding valid Gemini models.
+请确保将快速和智能模型更新为相应的有效 Gemini 模型。
 ```bash
 LLM_PROVIDER=google
-GEMINI_API_KEY=[Your key]
+GOOGLE_API_KEY=[您的密钥]
 ```

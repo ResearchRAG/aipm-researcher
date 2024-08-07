@@ -26,20 +26,20 @@ module.exports = {
           type: 'doc',
           docId: 'welcome',
           position: 'left',
-          label: 'Docs',
+          label: '文档',
         },
 
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'blog', label: '研究', position: 'left'},
         {
           type: 'doc',
           docId: 'faq',
           position: 'left',
-          label: 'FAQ',
+          label: '常问',
         },
         {
-            href: 'mailto:assaf.elovic@gmail.com',
+            href: 'mailto:ai.flyingwheel@gmail.com',
             position: 'left',
-            label: 'Contact',
+            label: '联系',
         },
         {
           href: 'https://github.com/ResearchRAG/aipm-researcher',
@@ -52,15 +52,15 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Community',
+          title: '社区',
           items: [
             {
-              label: 'Discord',
-              href: 'https://discord.gg/8YkBcCED5y',
+              label: 'Github',
+              href: 'https://github.com/ResearchRAG/aipm-researcher',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/assaf_elovic',
+              href: 'https://twitter.com/ai_flyingwheel',
             },
             {
               label: 'LinkedIn',
@@ -69,15 +69,15 @@ module.exports = {
           ],
         },
         {
-          title: 'Company',
+          title: '关于我们',
           items: [
             {
-              label: 'Homepage',
-              href: 'https://gptr.dev',
+              label: '官网网站',
+              href: 'https://theforage.cn',
             },
             {
-              label: 'Contact',
-              href: 'mailto:ResearchRAG@gmail.com',
+              label: '联系我们',
+              href: 'mailto:ai.flyingwheel@gmail.com',
             },
           ],
         },
@@ -119,7 +119,8 @@ module.exports = {
         // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
-        blogDir:"./blog/"
+        blogDir:"./blog/",
+        language: ["zh"],
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
         // language: ["en", "zh"],

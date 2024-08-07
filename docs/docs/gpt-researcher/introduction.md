@@ -4,7 +4,7 @@
 [![Discord关注](https://dcbadge.vercel.app/api/server/SK3KKuSD?style=for-the-badge)](https://discord.gg/SK3KKuSD) 
 
 [![GitHub仓库星标](https://img.shields.io/github/stars/ResearchRAG/gpt-researcher?style=social)](https://github.com/ResearchRAG/aipm-researcher) 
-[![Twitter关注](https://img.shields.io/twitter/follow/assaf_elovic?style=social)](https://twitter.com/assaf_elovic) 
+[![Twitter关注](https://img.shields.io/twitter/follow/ai_flyingwheel?style=social)](https://twitter.com/ai_flyingwheel) 
 [![PyPI版本](https://badge.fury.io/py/gpt-researcher.svg)](https://badge.fury.io/py/gpt-researcher) 
 [![在Colab中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ResearchRAG/aipm-researcher/blob/master/examples/pip-run.ipynb) 
 

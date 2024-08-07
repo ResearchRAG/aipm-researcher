@@ -1,9 +1,9 @@
-# Tailored Research
-The AIPM Researcher package allows you to tailor the research to your needs such as researching on specific sources or local documents, and even specify the agent prompt instruction upon which the research is conducted.
+# 定制化研究（Tailored Research）
+AIPM 研究员软件包允许您根据需求定制研究，例如针对特定来源或本地文档进行研究，并可指定代理提示指令以进行研究。
 
-### Research on Specific Sources 📚
+### 针对特定来源的研究 📚
 
-You can specify the sources you want the AIPM Researcher to research on by providing a list of URLs. The AIPM Researcher will then conduct research on the provided sources.
+您可以通过提供 URL 列表来指定 AIPM 研究员要研究的来源。然后，AIPM 研究员将在提供的来源上进行研究。
 
 ```python
 from gpt_researcher import GPTResearcher
@@ -16,7 +16,7 @@ async def get_report(query: str, report_type: str, sources: list) -> str:
     return report
 
 if __name__ == "__main__":
-    query = "What are the latest advancements in AI?"
+    query = "人工智能的最新进展是什么？"
     report_type = "research_report"
     sources = ["https://en.wikipedia.org/wiki/Artificial_intelligence", "https://www.ibm.com/watson/ai"]
 
@@ -24,10 +24,10 @@ if __name__ == "__main__":
     print(report)
 ```
 
-### Specify Agent Prompt 📝
+### 指定代理提示 📝
 
-You can specify the agent prompt instruction upon which the research is conducted. This allows you to guide the research in a specific direction and tailor the report layout.
-Simply pass the prompt as the `query` argument to the `GPTResearcher` class and the "custom_report" `report_type`.
+您可以指定代理提示指令，以指导研究的方向并定制报告的布局。
+只需将提示作为 `query` 参数传递给 `GPTResearcher` 类，并使用 "custom_report" 作为 `report_type`。
 
 ```python
 from gpt_researcher import GPTResearcher
@@ -41,26 +41,26 @@ async def get_report(prompt: str, report_type: str) -> str:
     
 if __name__ == "__main__":
     report_type = "custom_report"
-    prompt = "Research the latest advancements in AI and provide a detailed report in APA format including sources."
+    prompt = "研究人工智能的最新进展，并以 APA 格式提供详细报告，包括来源。"
 
     report = asyncio.run(get_report(prompt=prompt, report_type=report_type))
     print(report)
 ```
 
-### Research on Local Documents 📄
-You can instruct the AIPM Researcher to research on local documents by providing the path to those documents. Currently supported file formats are: PDF, plain text, CSV, Excel, Markdown, PowerPoint, and Word documents.
+### 本地文档研究 📄
+您可以通过提供文档路径，指导 AIPM 研究员对本地文档进行研究。当前支持的文件格式包括：PDF、纯文本、CSV、Excel、Markdown、PowerPoint 和 Word 文档。
 
-*Step 1*: Add the env variable `DOC_PATH` pointing to the folder where your documents are located.
+*步骤 1*：添加环境变量 `DOC_PATH` 指向您的文档所在文件夹。
 
-For example:
+例如：
 
 ```bash
 export DOC_PATH="./my-docs"
 ```
 
-*Step 2*: When you create an instance of the `GPTResearcher` class, pass the `report_source` argument as `"local"`.
+*步骤 2*：在创建 `GPTResearcher` 类的实例时，将 `report_source` 参数作为 `"local"` 传递。
 
-AIPM Researcher will then conduct research on the provided documents.
+AIPM 研究员将在提供的文档上进行研究。
 
 ```python
 from gpt_researcher import GPTResearcher
@@ -73,35 +73,33 @@ async def get_report(query: str, report_type: str, report_source: str) -> str:
     return report
     
 if __name__ == "__main__":
-    query = "What can you tell me about myself based on my documents?"
+    query = "根据我的文档，你能告诉我关于我自己的一些信息吗？"
     report_type = "research_report"
-    report_source = "local" # "local" or "web"
+    report_source = "local" # "local" 或 "web"
 
     report = asyncio.run(get_report(query=query, report_type=report_type, report_source=report_source))
     print(report)
 ```
 
-### Research on LangChain Documents 🦜️🔗
-You can instruct the AIPM Researcher to research on a list of langchain document instances.
+### LangChain 文档研究 🦜️🔗
+您可以指导 AIPM 研究员对一系列 langchain 文档实例进行研究。
 
-For example:
+例如：
 
 ```python
 from langchain_core.documents import Document
-from typing import List, Dict
+from typing import List
 from gpt_researcher import GPTResearcher
 from langchain_postgres.vectorstores import PGVector
 from langchain_openai import OpenAIEmbeddings
 from sqlalchemy import create_engine
 import asyncio
 
-
-
 CONNECTION_STRING = 'postgresql://someuser:somepass@localhost:5432/somedatabase'
 
 def get_retriever(collection_name: str, search_kwargs: Dict[str, str]):
     engine = create_engine(CONNECTION_STRING)
-    embeddings =  OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings()
 
     index = PGVector.from_existing_index(
         use_jsonb=True,
@@ -112,7 +110,6 @@ def get_retriever(collection_name: str, search_kwargs: Dict[str, str]):
 
     return index.as_retriever(search_kwargs=search_kwargs)
 
-
 async def get_report(query: str, report_type: str, report_source: str, documents: List[Document]) -> str:
     researcher = GPTResearcher(query=query, report_type=report_type, report_source=report_source, documents=documents)
     await researcher.conduct_research()
@@ -120,14 +117,13 @@ async def get_report(query: str, report_type: str, report_source: str, documents
     return report
 
 if __name__ == "__main__":
-    query = "What can you tell me about blue cheese based on my documents?"
+    query = "根据我的文档，关于“犀利商学人商业计划书”你能告诉我什么？"
     report_type = "research_report"
     report_source = "langchain_documents"
 
-    # using a LangChain retriever to get all the documents regarding cheese
-    # https://api.python.langchain.com/en/latest/retrievers/langchain_core.retrievers.BaseRetriever.html#langchain_core.retrievers.BaseRetriever.invoke
-    langchain_retriever = get_retriever("cheese_collection", { "k": 3 })
-    documents = langchain_retriever.invoke("All the documents about cheese")
+    # 使用 LangChain 检索器获取有关奶酪的所有文档
+    langchain_retriever = get_retriever("cheese_collection", {"k": 3})
+    documents = langchain_retriever.invoke("关于商业计划书的所有文档")
     report = asyncio.run(get_report(query=query, report_type=report_type, report_source=report_source, documents=documents))
     print(report)
 ```

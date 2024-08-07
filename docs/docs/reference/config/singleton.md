@@ -3,29 +3,28 @@ sidebar_label: singleton
 title: config.singleton
 ---
 
-The singleton metaclass for ensuring only one instance of a class.
+用于确保一个类只有一个实例的单例元类。
 
-## Singleton Objects
+## 单例对象
 
 ```python
 class Singleton(abc.ABCMeta, type)
 ```
 
-Singleton metaclass for ensuring only one instance of a class.
+用于确保一个类只有一个实例的单例元类。
 
-#### \_\_call\_\_
+#### __call__：
 
 ```python
 def __call__(cls, *args, **kwargs)
 ```
 
-Call method for the singleton metaclass.
+单例元类的调用方法。
 
-## AbstractSingleton Objects
+## 抽象单例对象
 
 ```python
 class AbstractSingleton(abc.ABC, metaclass=Singleton)
 ```
 
-Abstract singleton class for ensuring only one instance of a class.
-
+用于确保一个类只有一个实例的抽象单例类。

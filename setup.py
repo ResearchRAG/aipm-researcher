@@ -16,9 +16,9 @@ setup(
     packages=find_packages(exclude=exclude_packages),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/assafelovic/gpt-researcher",
-    author="Assaf Elovic",
-    author_email="assaf.elovic@gmail.com",
+    url="https://github.com/ResearchRAG/aipm-researcher",
+    author="Loi Ng",
+    author_email="ai.flyingwheel@gmail.com",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",

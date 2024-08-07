@@ -37,7 +37,7 @@ assistant_prompt_instruction = """您是一位金融专家。
 """
 ```
 
-接下来，让我们完成步骤1，并使用最新的[GPT-4 Turbo模型](https://github.com/openai/openai-python/tree/main#installation)（128K上下文）和调用函数使用[Tavily网络搜索API](https://tavily.com/)创建助手：
+接下来，让我们完成步骤1，并使用最新的[LLMs Turbo模型](https://github.com/openai/openai-python/tree/main#installation)（128K上下文）和调用函数使用[Tavily网络搜索API](https://tavily.com/)创建助手：
 
 ```python
 # 创建助手

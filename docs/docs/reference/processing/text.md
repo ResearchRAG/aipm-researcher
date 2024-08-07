@@ -3,33 +3,31 @@ sidebar_label: text
 title: processing.text
 ---
 
-Text processing functions
+文本处理函数
 
-#### split\_text
+#### split_text
 
 ```python
 def split_text(text: str,
                max_length: int = 8192) -> Generator[str, None, None]
 ```
 
-Split text into chunks of a maximum length
+将文本分割成长度不超过指定最大长度的多个块。
 
-**Arguments**:
+**参数**：
 
-- `text` _str_ - The text to split
-- `max_length` _int, optional_ - The maximum length of each chunk. Defaults to 8192.
-  
+- `text` _str_ - 要分割的文本
+- `max_length` _int, 可选_ - 每个文本块的最大长度，默认为 8192。
 
-**Yields**:
+**生成**：
 
-- `str` - The next chunk of text
-  
+- `str` - 下一个文本块。
 
-**Raises**:
+**引发**：
 
-- `ValueError` - If the text is longer than the maximum length
+- `ValueError` - 如果文本长度超过最大长度。
 
-#### summarize\_text
+#### summarize_text
 
 ```python
 def summarize_text(url: str,
@@ -38,66 +36,62 @@ def summarize_text(url: str,
                    driver: Optional[WebDriver] = None) -> str
 ```
 
-Summarize text using the OpenAI API
+使用 OpenAI API 对文本进行摘要。
 
-**Arguments**:
+**参数**：
 
-- `url` _str_ - The url of the text
-- `text` _str_ - The text to summarize
-- `question` _str_ - The question to ask the model
-- `driver` _WebDriver_ - The webdriver to use to scroll the page
-  
+- `url` _str_ - 文本的 URL。
+- `text` _str_ - 要摘要的文本。
+- `question` _str_ - 向模型提出的的问题。
+- `driver` _WebDriver_ - 用于滚动页面的 webdriver。
 
-**Returns**:
+**返回值**：
 
-- `str` - The summary of the text
+- `str` - 文本的摘要。
 
-#### scroll\_to\_percentage
+#### scroll_to_percentage
 
 ```python
 def scroll_to_percentage(driver: WebDriver, ratio: float) -> None
 ```
 
-Scroll to a percentage of the page
+滚动到页面的指定百分比位置。
 
-**Arguments**:
+**参数**：
 
-- `driver` _WebDriver_ - The webdriver to use
-- `ratio` _float_ - The percentage to scroll to
-  
+- `driver` _WebDriver_ - 要使用的 webdriver。
+- `ratio` _float_ - 要滚动到的百分比。
 
-**Raises**:
+**引发**：
 
-- `ValueError` - If the ratio is not between 0 and 1
+- `ValueError` - 如果比率不在 0 到 1 之间。
 
-#### create\_message
+#### create_message
 
 ```python
 def create_message(chunk: str, question: str) -> Dict[str, str]
 ```
 
-Create a message for the chat completion
+为聊天补全创建消息。
 
-**Arguments**:
+**参数**：
 
-- `chunk` _str_ - The chunk of text to summarize
-- `question` _str_ - The question to answer
-  
+- `chunk` _str_ - 要摘要的文本块。
+- `question` _str_ - 要回答的问题。
 
-**Returns**:
+**返回值**：
 
-  Dict[str, str]: The message to send to the chat completion
+  Dict[str, str]: 要发送到聊天补全的消息。
 
-#### write\_to\_file
+#### write_to_file
 
 ```python
 def write_to_file(filename: str, text: str) -> None
 ```
 
-Write text to a file
+将文本写入文件。
 
-**Arguments**:
+**参数**：
 
-- `text` _str_ - The text to write
-- `filename` _str_ - The filename to write to
-
+- `text` _str_ - 要写入的文本。
+- `filename` _str_ - 要写入的文件名。

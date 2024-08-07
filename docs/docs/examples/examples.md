@@ -1,30 +1,29 @@
-# Examples
+# 示例
 
-### Run PIP Package
+### 运行 PIP 包
+
 ```python
 from gpt_researcher import GPTResearcher
 import asyncio
 
-
 async def main():
     """
-    This is a sample script that shows how to run a research report.
+    这是一个示例脚本，展示了如何运行研究报告。
     """
-    # Query
-    query = "What happened in the latest burning man floods?"
+    # 查询主题
+    query = "最新纳斯达克综合指数的详情是什么？"
 
-    # Report Type
+    # 报告类型
     report_type = "research_report"
 
-    # Initialize the researcher
+    # 初始化研究员
     researcher = GPTResearcher(query=query, report_type=report_type, config_path=None)
-    # Conduct research on the given query
+    # 对给定的查询进行研究
     await researcher.conduct_research()
-    # Write the report
+    # 编写报告
     report = await researcher.write_report()
     
     return report
-
 
 if __name__ == "__main__":
     asyncio.run(main())

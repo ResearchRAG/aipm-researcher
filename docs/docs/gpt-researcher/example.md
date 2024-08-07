@@ -7,7 +7,7 @@ from gpt_researcher import GPTResearcher
 import asyncio
 
 # 最好在脚本顶部定义全局常量
-QUERY = "最新的美国总统大选发生了什么？"
+QUERY = "最新纳斯达克综合指数的详情是什么？"
 REPORT_TYPE = "research_report"
 
 async def fetch_report(query, report_type):

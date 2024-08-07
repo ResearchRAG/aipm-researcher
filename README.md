@@ -1,9 +1,9 @@
 <div align="center">
 <!--<h1 style="display: flex; align-items: center; gap: 10px;">
-  <img src="https://github.com/assafelovic/gpt-researcher/assets/13554167/a45bac7c-092c-42e5-8eb6-69acbf20dde5" alt="Logo" width="25">
+  <img src="https://github.com/ResearchRAG/aipm-researcher/assets/13554167/a45bac7c-092c-42e5-8eb6-69acbf20dde5" alt="Logo" width="25">
   AIPM Researcher
 </h1>-->
-<img src="https://github.com/assafelovic/gpt-researcher/assets/13554167/20af8286-b386-44a5-9a83-3be1365139c3" alt="Logo" width="80">
+<img src="https://github.com/ResearchRAG/aipm-researcher/assets/13554167/20af8286-b386-44a5-9a83-3be1365139c3" alt="Logo" width="80">
 
 ####
 
@@ -13,17 +13,17 @@
 <!--[![Discord Follow](https://img.shields.io/discord/1127851779011391548?style=for-the-badge&logo=discord&logoColor=white&color=7e61ab)](https://discord.gg/cPhHPZ6Z)-->
 
 <!--[![Github License](https://img.shields.io/pypi/l/gpt-researcher?logoColor=white&logo=github&color=FF5A5F&style=for-the-badge)](https://opensource.org/licenses/MIT)-->
-<!--[![License](https://img.shields.io/github/license/assafelovic/gpt-researcher?color=FF5A5F)](https://github.com/assafelovic/gpt-researcher/blob/main/LICENSE)-->
+<!--[![License](https://img.shields.io/github/license/ResearchRAG/aipm-researcher?color=FF5A5F)](https://github.com/ResearchRAG/aipm-researcher/blob/main/LICENSE)-->
 [![PyPI version](https://img.shields.io/pypi/v/gpt-researcher?logo=pypi&logoColor=white&style=flat)](https://badge.fury.io/py/gpt-researcher)
-![GitHub Release](https://img.shields.io/github/v/release/assafelovic/gpt-researcher?style=flat&logo=github)
-[![Open In Colab](https://img.shields.io/static/v1?message=Open%20in%20Colab&logo=googlecolab&labelColor=grey&color=yellow&label=%20&style=flat&logoSize=40)](https://colab.research.google.com/github/assafelovic/gpt-researcher/blob/master/examples/pip-run.ipynb)
+![GitHub Release](https://img.shields.io/github/v/release/ResearchRAG/aipm-researcher?style=flat&logo=github)
+[![Open In Colab](https://img.shields.io/static/v1?message=Open%20in%20Colab&logo=googlecolab&labelColor=grey&color=yellow&label=%20&style=flat&logoSize=40)](https://colab.research.google.com/github/ResearchRAG/aipm-researcher/blob/master/examples/pip-run.ipynb)
 [![Docker Image Version](https://img.shields.io/docker/v/elestio/gpt-researcher/latest?arch=amd64&style=flat&logo=docker&logoColor=white&color=1D63ED)](https://hub.docker.com/r/gptresearcher/gpt-researcher)
-[![Twitter Follow](https://img.shields.io/twitter/follow/assaf_elovic?style=social)](https://twitter.com/assaf_elovic)
-<!--[![Twitter](https://img.shields.io/badge/Twitter-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/assaf_elovic)-->
+[![Twitter Follow](https://img.shields.io/twitter/follow/ai_flyingwheel?style=social)](https://twitter.com/ai_flyingwheel)
+<!--[![Twitter](https://img.shields.io/badge/Twitter-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/ai_flyingwheel)-->
 
-[English](https://github.com/assafelovic/gpt-researcher/blob/master/README.md) |
-[中文](https://github.com/assafelovic/gpt-researcher/blob/master/README-zh_CN.md) |
-[日本語](https://github.com/assafelovic/gpt-researcher/blob/master/README-ja_JP.md)
+[English](https://github.com/ResearchRAG/aipm-researcher/blob/master/README.md) |
+[中文](https://github.com/ResearchRAG/aipm-researcher/blob/master/README-zh_CN.md) |
+[日本語](https://github.com/ResearchRAG/aipm-researcher/blob/master/README-ja_JP.md)
 </div>
 
 **AIPM Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks.** 
@@ -41,14 +41,14 @@ The agent can produce detailed, factual and unbiased research reports, with cust
 - Using only a selection of web sources can create bias in determining the right conclusions for research tasks.
 
 ## Demo
-https://github.com/assafelovic/gpt-researcher/assets/13554167/dd6cf08f-b31e-40c6-9907-1915f52a7110
+https://github.com/ResearchRAG/aipm-researcher/assets/13554167/dd6cf08f-b31e-40c6-9907-1915f52a7110
 
 ## Architecture
 The main idea is to run "planner" and "execution" agents, whereas the planner generates questions to research, and the execution agents seek the most related information based on each generated research question. Finally, the planner filters and aggregates all related information and creates a research report. <br /> <br /> 
 The agents leverage both `gpt-4o-mini` and `gpt-4o` (128K context) to complete a research task. We optimize for costs using each only when necessary. **The average research task takes around 3 minutes to complete, and costs ~$0.005.**
 
 <div align="center">
-<img align="center" height="600" src="https://github.com/assafelovic/gpt-researcher/assets/13554167/4ac896fd-63ab-4b77-9688-ff62aafcc527">
+<img align="center" height="600" src="https://github.com/ResearchRAG/aipm-researcher/assets/13554167/4ac896fd-63ab-4b77-9688-ff62aafcc527">
 </div>
 
 
@@ -90,7 +90,7 @@ Please see [here](https://docs.gptr.dev/docs/gpt-researcher/getting-started) for
 > **Step 1** - Download the project and navigate to its directory
 
 ```bash
-git clone https://github.com/assafelovic/gpt-researcher.git
+git clone https://github.com/ResearchRAG/aipm-researcher.git
 cd gpt-researcher
 ```
 
@@ -174,18 +174,18 @@ By using LangGraph, the research process can be significantly improved in depth 
 
 An average run generates a 5-6 page research report in multiple formats such as PDF, Docx and Markdown.
 
-Check it out [here](https://github.com/assafelovic/gpt-researcher/tree/master/multi_agents) or head over to our [documentation](https://docs.gptr.dev/docs/gpt-researcher/langgraph) for more information.
+Check it out [here](https://github.com/ResearchRAG/aipm-researcher/tree/master/multi_agents) or head over to our [documentation](https://docs.gptr.dev/docs/gpt-researcher/langgraph) for more information.
 
 ## 🚀 Contributing
-We highly welcome contributions! Please check out [contributing](https://github.com/assafelovic/gpt-researcher/blob/master/CONTRIBUTING.md) if you're interested.
+We highly welcome contributions! Please check out [contributing](https://github.com/ResearchRAG/aipm-researcher/blob/master/CONTRIBUTING.md) if you're interested.
 
 Please check out our [roadmap](https://trello.com/b/3O7KBePw/gpt-researcher-roadmap) page and reach out to us via our [Discord community](https://discord.gg/QgZXvJAccX) if you're interested in joining our mission.
-<a href="https://github.com/assafelovic/gpt-researcher/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=assafelovic/gpt-researcher" />
+<a href="https://github.com/ResearchRAG/aipm-researcher/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ResearchRAG/aipm-researcher" />
 </a>
 ## ✉️ Support / Contact us
 - [Community Discord](https://discord.gg/spBgZmm3Xe)
-- Author Email: assaf.elovic@gmail.com
+- Author Email: ai.flyingwheel@gmail.com
 
 ## 🛡 Disclaimer
 
@@ -201,11 +201,11 @@ Our view on unbiased research claims:
 ---
 
 <p align="center">
-<a href="https://star-history.com/#assafelovic/gpt-researcher">
+<a href="https://star-history.com/#ResearchRAG/aipm-researcher">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=assafelovic/gpt-researcher&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=assafelovic/gpt-researcher&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=assafelovic/gpt-researcher&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ResearchRAG/aipm-researcher&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ResearchRAG/aipm-researcher&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ResearchRAG/aipm-researcher&type=Date" />
   </picture>
 </a>
 </p>

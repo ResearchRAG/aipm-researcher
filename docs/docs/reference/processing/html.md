@@ -3,41 +3,38 @@ sidebar_label: html
 title: processing.html
 ---
 
-HTML processing functions
+HTML处理函数
 
-#### extract\_hyperlinks
+#### extract_hyperlinks
 
 ```python
 def extract_hyperlinks(soup: BeautifulSoup,
                        base_url: str) -> list[tuple[str, str]]
 ```
 
-Extract hyperlinks from a BeautifulSoup object
+从BeautifulSoup对象中提取超链接
 
-**Arguments**:
+**参数**：
 
-- `soup` _BeautifulSoup_ - The BeautifulSoup object
-- `base_url` _str_ - The base URL
-  
+- `soup` _BeautifulSoup_ - BeautifulSoup对象
+- `base_url` _str_ - 基础URL
 
-**Returns**:
+**返回值**：
 
-  List[Tuple[str, str]]: The extracted hyperlinks
+  List[Tuple[str, str]]: 提取的超链接列表
 
-#### format\_hyperlinks
+#### format_hyperlinks
 
 ```python
 def format_hyperlinks(hyperlinks: list[tuple[str, str]]) -> list[str]
 ```
 
-Format hyperlinks to be displayed to the user
+格式化超链接以供用户展示
 
-**Arguments**:
+**参数**：
 
-- `hyperlinks` _List[Tuple[str, str]]_ - The hyperlinks to format
-  
+- `hyperlinks` _List[Tuple[str, str]]_ - 需要格式化的超链接列表
 
-**Returns**:
+**返回值**：
 
-- `List[str]` - The formatted hyperlinks
-
+- `List[str]` - 格式化后的超链接字符串列表
