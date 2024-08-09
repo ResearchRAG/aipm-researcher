@@ -1,6 +1,7 @@
 import asyncio
 import random
 import time
+# import ssl
 
 from typing import Set
 
@@ -124,6 +125,8 @@ class GPTResearcher:
             self.context = await self.__get_context_by_urls(self.source_urls)
 
         elif self.report_source == ReportSource.Local.value:
+            # print(self.cfg.doc_path)
+            # ssl._create_default_https_context = ssl._create_unverified_context
             document_data = await DocumentLoader(self.cfg.doc_path).load()
             self.context = await self.__get_context_by_search(self.query, document_data)
 
